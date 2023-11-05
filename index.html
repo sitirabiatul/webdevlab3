@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Font awesome icon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+      </head>
+      <body>
+   <!------ header ---------->
+   <div id="header" class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav class="navbar">
+          <a href="index.html" class="navbar-name">S.R.A</a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Hobbies</a></li>
+            <li><a href="#">Campus Life</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-sm-12">
+        <div class="header-text">
+          <h1>Hi, I'm Siti Rabi'atul Adawiyah</h1>
+          <p>This is my personal blog!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <!------- About -------->
+ <div id="About">
+    <div class="container">
+        <div class="row">
+            <div class="about-col1">
+                <img src="images\profilepic.jpg" alt="">
+            </div>
+            <div class="about-col2">
+            <h1 class="sub-title">About Me</h1>
+            <p>My fullname is Siti Rabi'atul Adawiyah Binti Ekhwan. I live in Seremban, Negeri Sembilan. 
+                I was born in Batu Pahat, and my date of birth is 7/2/2002. 
+                Here are some more details about me!</p>
+            
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('instituations')">Instituations</p>
+                <p class="tab-links" onclick="opentab('contact')">Contact</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Beginner</li>
+                    <li><span>Web Development</span><br>Beginner</li>
+                    <li><span>App Development</span><br>Beginner</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="instituations">
+                <ul>
+                    <li><span>Matriculation</span><br>course - Module 2</li>
+                    <li><span>UTHM</span><br>course - Software Engineering </li>
+    
+                </ul>
+            </div>
+            <div class="tab-contents" id="contact">
+                <ul>
+                    <li><span>Phone</span><br>010-4548863</li>
+                    <li><span>Social Media</span><br>@sramnnn</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+ </div>
+ <!-------Hobbies-------->
+ <div id="hobbies">
+    <div class="container">
+        <div class = "title">
+            <h2>My Hobbies</h2>
+            <p>These are my recent hobbies</p>
+          </div>
+
+<!-------Hobbies content-------->  
+<div class = "row">
+        
+            <div class = "hobby-col1">
+              <div class = "hobby-img">
+                <img src = "images\hby1.jpg" alt = "">
+                <span><i class = "far fa-heart"></i> 22</span>
+                <span>This is Nami</span>
+            </div>
+            <div class = "hobby-title">
+                <a href = "#">My first hobby is to take care of my cat. My old cat has passed away :( and now this is my recent cat!</a>
+              </div>
+        </div>
+
+        <div class = "hobby-col2">
+            <div class = "hobby-img">
+              <img src = "images\hby2.jpg" alt = "">
+              <span><i class = "far fa-heart"></i> 19</span>
+              <span>This is my aquarium, ps: i dont hv pic of my fish >.< </span>
+            </div>
+            <div class = "hobby-title">
+              <a href = "#">This is my second hobby, to take care of my fish ! I even design my own aquarium</a>
+            </div>
+          </div>
+        </div>
+<!-------Campus Life -------->
+<div id="Campus-life">
+    <div class="container">
+      <div class="title">
+        <h1>My Campus Life</h1>
+      </div>
+      <div class="row">
+        <div class="campus-col">
+          <img src="images\hking.jpg" alt="">
+          <h2>Hiking with Friends!</h2>
+          <p>My first campus hiking trip was pure happiness! The relief of reaching the summit and bonding with friends made it unforgettable.</p>
+        </div>
+        <div class="campus-col">
+          <img src="images\pulau.jpg" alt="">
+          <h2>Mersing Pulau Trip with Friends!</h2>
+          <p>The Pulau trip was a blast! Seeing Nemo and exploring underwater wonders was pure fun.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------- Footer -------->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>&copy; 2023 Siti Rabi'atul Adawiyah. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+</body>
+</html>
